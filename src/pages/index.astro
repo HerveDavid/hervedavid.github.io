@@ -16,8 +16,13 @@ const posts = (await getCollection('blog')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			main {
-				/* width: 960px; */
 				font-family: 'LibreFranklin', sans-serif;
+			}
+			a {
+				color: #958575;
+		    display: inline-block;
+		    font-weight: bold;
+		    text-decoration: underline;
 			}
 			ul {
 				display: flex;

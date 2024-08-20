@@ -2,6 +2,7 @@
 const today = new Date();
 ---
 
+<hr>
 <footer>
 	&copy; {today.getFullYear()} David Herve. All rights reserved.
 	<div class="social-links">
@@ -21,8 +22,11 @@ const today = new Date();
 	</div>
 </footer>
 <style>
+	hr {
+		margin: 0;
+	}
 	footer {
-		padding: 2em 1em 6em 1em;
+		padding: 2em 1em 2em 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;

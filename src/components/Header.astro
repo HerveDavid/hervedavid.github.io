@@ -5,24 +5,29 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/" style={{"padding-left": 0}}>{SITE_TITLE}</a></h2>
+		<h1><a href="/" style={{"padding-left": 0}}>{SITE_TITLE}</a></h1>
 		<div>
 			<HeaderLink href="/">Blog</HeaderLink>
 			<HeaderLink href="/about" style={{'padding-right': 0}}>About</HeaderLink>
-	
 		</div>
 	</nav>
+	<hr>
 </header>
 
 <style>
 
+	hr {
+    margin: 0;
+	}
+
 	nav {
-		margin: 0;
-		padding: 0;
+    margin: 0 auto;
+		padding: 0 1rem;
+    max-width: var(--width-content);
 	}
 
 	nav a {
-		padding: 1em 0.5em;
+		padding: 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
