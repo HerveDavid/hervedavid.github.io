@@ -21,28 +21,65 @@ const { title, description } = Astro.props;
 			border-radius: 12px;
 		}
 
+		@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 480px)
+	  and (-webkit-min-device-pixel-ratio: 2) {
+			img {
+				display: none;
+			}
+		}
+
+		.container {
+			display: inline-flex;
+		}
+
+		main {
+			background-color: var(--color-bg);
+			height: 36rem;
+		}
+
+		.main {
+			background-color: var(--color-bg);
+			opacity: 1;
+			background-image: radial-gradient(var(--color-bg-secondary) 1px, var(--color-bg) 1px);
+			background-size: 20px 20px;
+		}
+
+		p {
+			font-size: large;
+		}
+
 
 	</style>
 
 	<body>
 		<Header />
-		<main style={{ 'margin-top': 0 }}>
-			<h1>About</h1>
-			<div style={{ display: 'inline-flex', 'align-items': 'start' }}>
-				<img width={1020} height={510} src="/profil.jpg" alt="profil image" />
-				<div style={{ display: 'block' }}>
-					<p style={{ margin: 0 }}>
-						I'm David Herve, a programmer who likes things simple.
-						Learning programming languages allows me to build systems in the most beautiful way possible, and that's what this site is all about.
-						You can find me on GitHub or Linkedin. 
-						If you want to find me in real life, I'm in Lyon. 
-					</p>
-					<p>
-						All code from the blog is available under MIT or Apache-2.0 licences.
-					</p>
+		<div class="main">
+			<main style={{ 'margin-top': 0 }}>
+				<h1>About</h1>
+				<div class="container">
+					<img width={1020} height={510} src="/profil.jpg" alt="profil image" />
+					<div>
+						<p style={{ margin: 0 }}>
+							I'm David Herve, a programmer who likes simple things.
+						</p>
+						<div>
+							<p>
+								Learning programming languages allows me to build systems in the most beautiful way possible, and that's what this site is all about.
+							</p>
+							<p>
+								You can find me on GitHub or Linkedin. 
+								If you want to find me in real life, I'm in Lyon. 
+							</p>
+							<p>
+								All code from the blog is available under MIT or Apache-2.0 licences.
+							</p>
+						</div>
+					</div>
 				</div>
-			</div>
-		</main>
+			</main>
+		</div>
 		<Footer />
 	</body>
 </html>
